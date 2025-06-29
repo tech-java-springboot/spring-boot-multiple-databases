@@ -27,6 +27,7 @@ public class MultiRestController {
 	@Autowired
 	private CustomerRepository customerRepository;
 	
+	//1. create products
 	@PostMapping("/create/products")
 	public ResponseEntity<String> createProducts(@RequestBody List<Product> products){
 		ResponseEntity<String> response = null;
@@ -38,6 +39,7 @@ public class MultiRestController {
 		return response;
 	}
 	
+	//2. create customers
 	@PostMapping("/create/customers")
 	public ResponseEntity<String> createCustomers(@RequestBody List<Customer> customers){
 		ResponseEntity<String> response = null;
@@ -49,6 +51,7 @@ public class MultiRestController {
 		return response;
 	}
 	
+	//3. get products
 	@GetMapping("/get/products")
 	public ResponseEntity<List<Product>> getProducts(){
 		ResponseEntity<List<Product>> response = null;
@@ -60,6 +63,7 @@ public class MultiRestController {
 		return response;
 	}
 	
+	//4. get customers
 	@GetMapping("/get/customers")
 	public ResponseEntity<List<Customer>> getCustomers(){
 		ResponseEntity<List<Customer>> response = null;
